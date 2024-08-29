@@ -1,0 +1,71 @@
+plugins {
+    id 'java'
+    id "maven-publish"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+group 'tuhh.itl'
+version '1.0.3-SNAPSHOT'
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'generator.Main',
+                'Multi-Release':true
+        )
+    }
+}
+
+task fatJar(type: Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest.from jar.manifest
+    archiveFileName.set('GENIE-Generator.jar')
+    from {
+        // change here: runtimeClasspath instead of runtime
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    exclude 'META-INF/*.RSA'
+    exclude 'META-INF/*.SF'
+    exclude 'META-INF/*.DSA'
+    with jar
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+
+    //das sollte nicht hier stehen müssen!
+    maven {
+        url "https://nexus.se.rwth-aachen.de/content/groups/public"
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    implementation "tuhh.itl:fdl:1.1.3-SNAPSHOT"
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '1.33'
+    implementation 'org.reflections:reflections:0.10.2'
+    implementation 'org.freemarker:freemarker:2.3.31'
+    implementation "de.monticore:monticore-runtime:7.2.0-SNAPSHOT"
+    implementation "de.monticore:monticore-grammar:7.2.0-SNAPSHOT"
+    implementation group: 'org.matheclipse', name: 'matheclipse-core', version: '2.0.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.0-rc3'
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "file.encoding", "utf-8"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

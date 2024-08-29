@@ -1,0 +1,18 @@
+FDL Volumenstrom_Eq {
+  EQUATION V^^{.} = A * v
+  WITH:
+    ALIASES:
+      V^^{.} = "Volumenstrom";
+      A = "Förderfläche";
+      v = "Fördergeschwindigkeit";
+
+    SPECIFICATIONS:
+      V^^{.} = "length"^3/"time";
+      A = "length"^2;
+      v = "length"/"time";
+
+    REFERENCES:
+      V^^{.} = 0.1-10 m^3/s IN FLOAT[1];
+      A = 1-2.5 m^2 IN FLOAT[1];
+      v = 0.05-2 m/s IN FLOAT[2];
+}

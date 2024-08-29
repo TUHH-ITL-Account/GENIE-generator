@@ -1,0 +1,12 @@
+FDL Grundbegriffe_Fördertechnik_Fig {
+  FIGURE
+  FILE
+    "SystematikA1.png"
+  LABELS {
+    "Senke" : (547;116) ;
+    "Fördertechnik" : (274;115) ;
+    "Fördern" : (175;188);
+    "Fördermittel": (278;22);
+    "Quelle": (52;118);
+  }
+}

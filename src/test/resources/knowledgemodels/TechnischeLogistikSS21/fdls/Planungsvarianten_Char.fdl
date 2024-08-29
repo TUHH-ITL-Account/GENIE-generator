@@ -1,0 +1,8 @@
+FDL Planungsvarianten_Char {
+  CHAR "Planungsvarianten" ["allgemein", "Fabrikplanung"] := {
+    "Zur Auswahl der optimalen Planungsalternative sollten 2 bis max. 3 sinnvolle Varianten aufgestellt werden.";
+    "Spezifikation des eingesetzten Equipments (z.B. Arbeitsgangbreiten, Aufnahmehöhen)";
+    "Spezifikation der Lagereinheit (z. B. können in einem Fach Lagereinheiten mit unterschiedlichen Abmaßen und Gewichten gelagert werden)";
+    "Spezifikationen im Layout (z. B. kürzere Regale, mehr Gänge, größere Fachtiefen)"
+  }
+}

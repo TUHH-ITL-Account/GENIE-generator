@@ -1,0 +1,14 @@
+FDL Schritte_Kommissioniervorgang_Seq {
+  SEQUENCE "Schritte" := [
+    "Dies ist Schritt 1.";
+    "Dies ist Schritt 2.";
+    "Dies ist Schritt 3, 4 und 8.";
+    "Dies ist Schritt 3, 4 und 8.";
+    "Dies ist Schritt 5.";
+    "Dies ist Schritt 6 und 9.";
+    "Dies ist Schritt 7.";
+    "Dies ist Schritt 3, 4 und 8.";
+    "Dies ist Schritt 6 und 9.";
+    "Dies ist Schritt 10."
+   ]
+}

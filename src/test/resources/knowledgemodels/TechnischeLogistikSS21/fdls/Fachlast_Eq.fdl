@@ -1,0 +1,21 @@
+FDL Fachlast_Eq {
+  EQUATION TL_{"FA"} = ( SUM(Q_{"LE"}[i], i) + Q_{"AB"}) * TL_{"BW"}
+  WITH:
+    ALIASES:
+      TL_{"FA"} = "Fachlast";
+      Q_{"LE"} = "Gewichte der Ladeeinheiten";
+      Q_{"AB"} = "Gewicht Anbauteile";
+      TL_{"BW"} = "Trägerlastbeiwert";
+
+    SPECIFICATIONS:
+      TL_{"FA"} = "mass";
+      Q_{"LE"} = "mass" LIST;
+      Q_{"AB"} = "mass";
+
+    REFERENCES:
+      i = 0 - 3;
+      TL_{"FA"} = 2000-4500 kg IN INT ROUND_UP;
+      Q_{"LE"} = 50-1500 kg IN INT;
+      Q_{"AB"} = 5-50kg IN INT;
+      TL_{"BW"} = PARAMETER IN {1, 1.3, 2} ;
+}

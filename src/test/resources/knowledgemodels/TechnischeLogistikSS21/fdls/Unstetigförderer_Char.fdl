@@ -1,0 +1,16 @@
+FDL Unstetigförderer_Char {
+  CHAR "Unstetigförderer" := {
+    "Der Förderprozess findet in sog. Arbeitsspielen statt, bestehend aus Leer- und Festfahrten";
+    "Sind sehr flexibel.";
+    "Mit geeigneten Förder und Lastaufnahmemitteln kann fast alles transportiert werden.";
+    "Große Transportmengen lassen sich mit mehreren Fördermitteln transportieren.";
+    "Es existiert eine Vielzahl von Zusatzgeräten für verschiedene Arbeitsaufgaben.";
+    "Sind selten ortsfest und haben einen großen Arbeitsraum.";
+    "Es können mehrere verschiedene Quellen und Senken bedient werden.";
+    "Einzelne Einheiten können einfach ausgeschleust oder stillgelegt werden (Wartung).";
+    "Flurfreie Varianten stellen geringere Hindernisse dar (Kollisionsgefahr).";
+    "Das Verhältnis von Eigen zu Nutzlast ist erheblich höher als bei Stetigförderern:";
+    "Die Steuerung der Förderer benötigt einen erhöhten Aufwand, da jede Einheit einzeln gesteuert werden muss.";
+    "Der technologische Fortschritt (Industrie 4.0) ermöglicht mehr Automatisierung."
+  }
+}

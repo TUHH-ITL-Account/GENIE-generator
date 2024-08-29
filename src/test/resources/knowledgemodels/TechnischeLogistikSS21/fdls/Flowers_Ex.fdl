@@ -1,0 +1,7 @@
+FDL Flowers_Ex {
+  EXAMPLES "flowers" := {
+    "camellia" { IMAGES: ["camellia.png","camellia2.png"] } ;
+    "sunflower" { IMAGES: ["sunflower.png"] } ;
+    "tulip" { IMAGES: ["tulip.png"] }
+  }
+}

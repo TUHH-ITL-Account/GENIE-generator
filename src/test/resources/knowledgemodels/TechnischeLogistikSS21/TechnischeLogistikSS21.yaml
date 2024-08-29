@@ -1,0 +1,223 @@
+---
+fdlnodes:
+  - Massestrom_Eq1:
+      id: fdl1
+      filename: Massestrom_Eq1.fdl
+      prereq: [ Division ]
+  - Massestrom_Eq2:
+      id: fdl2
+      filename: Massestrom_Eq2.fdl
+      prereq: [ ]
+  - Stetigförderer_Ex_advanced:
+      id: fdl3
+      filename: Stetigförderer_Ex_advanced.fdl
+      prereq: [ ]
+  - Unstetigförderer_Ex_simple:
+      id: fdl4
+      filename: Unstetigförderer_Ex_simple.fdl
+      prereq: [ ]
+  - Schuettgut_Def:
+      id: fdl5
+      filename: Schuettgut_Def.fdl
+      prereq: [ ]
+  - Unstetigförderer_Char:
+      id: fdl6
+      filename: Unstetigförderer_Char.fdl
+      prereq: [ ]
+  - Stetigförderer_Char:
+      id: fdl7
+      filename: Stetigförderer_Char.fdl
+      prereq: [ ]
+  - Kreisfoerderer_TO:
+      id: fdl8
+      filename: Kreisfoerderer_TO.fdl
+      prereq: [ ]
+  - Flurförderzeuge_TO:
+      id: fdl9
+      filename: Flurförderzeuge_TO.fdl
+      prereq: [ ]
+  - Grundbegriffe_Fördertechnik_Fig:
+      id: fdl10
+      filename: Grundbegriffe_Fördertechnik_Fig.fdl
+      prereq: [ ]
+  - Erdanziehungskraft_Konst:
+      id: fdl11
+      filename: Erdanziehungskraft_Konst.fdl
+      prereq: [ ]
+  - Schwerkraft_Eq:
+      id: fdl12
+      filename: Schwerkraft_Eq.fdl
+      prereq: [ ]
+  - Schwerkraft_Rounded_Eq:
+      id: fdl12
+      filename: Schwerkraft_Rounded_Eq.fdl
+      prereq: [ ]
+  - Fachlast_Eq:
+      id: fdl12
+      filename: Fachlast_Eq.fdl
+      prereq: [ ]
+  - Schritte_Kommissioniervorgang_Seq:
+      id: fdl12
+      filename: Schritte_Kommissioniervorgang_Seq.fdl
+      prereq: [ ]
+  - Colors_Ex:
+      id: fdl12
+      filename: Colors_Ex.fdl
+      prereq: [ ]
+  - Flowers_Ex:
+      id: fdl12
+      filename: Flowers_Ex.fdl
+      prereq: [ ]
+  - Automatische_Verladesysteme_Hie:
+      id: fdl12
+      filename: Automatische_Verladesysteme_Hie.fdl
+      prereq: [ ]
+  - Standardfrachtketten_Pa:
+      id: fdl12
+      filename: Standardfrachtketten_Pa.fdl
+      prereq: [ ]
+  - Example_Pro:
+      id: fdl13
+      filename: Example_Pro.fdl
+      prereq: [ ]
+  - Volumenstrom_Eq:
+      id: fdl12
+      filename: Volumenstrom_Eq.fdl
+      prereq: [ ]
+  - Gegengewicht_Kippsicherheit_Eq:
+      id: fdl12
+      filename: Gegengewicht_Kippsicherheit_Eq.fdl
+      prereq: [ ]
+
+wmnodes:
+  - Mathematik:
+      name: "Mathematik"
+      id: mat1
+      children: [ Division ]
+      fdls: [ ]
+  - Division:
+      name: "Division"
+      id: mat2
+      children: [ ]
+      fdls: [ ]
+  - Physik:
+      name: "Physik"
+      id: phy
+      children: [ ]
+      fdls: [ Erdanziehungskraft_Konst, Schwerkraft_Eq, Schwerkraft_Rounded_Eq ]
+      generationSource: false
+  - TUHH:
+      name: "TUHH"
+      id: tl1
+      children: [ W ]
+      fdls: [ ]
+  - W:
+      name: "W Lehrstühle"
+      id: tl2
+      children: [ W6-ITL ]
+      fdls: [ ]
+  - W6-ITL:
+      name: "W6 Institut für Technische Logistik"
+      id: tl3
+      children: [ TL,Stuff-For-Testing ]
+      fdls: [ ]
+  - Stuff-For-Testing:
+      name: "W6 Institut für Technische Logistik"
+      id: tl3
+      children: [ Colors,Flowers ]
+      fdls: [ ]
+  - Colors:
+      name: "W6 Institut für Technische Logistik"
+      id: tl3
+      children: [ ]
+      fdls: [ Colors_Ex ]
+  - Flowers:
+      name: "W6 Institut für Technische Logistik"
+      id: tl3
+      children: [ ]
+      fdls: [ Flowers_Ex ]
+  - TL:
+      name: "Technische Logistik"
+      id: tl4
+      children: [ Transporttechnik, Kommisionierung ]
+      fdls: [ ]
+  - Kommisionierung:
+      name: "Kommisionierung"
+      id: tl4
+      children: [ ]
+      fdls: [ Fachlast_Eq, Schritte_Kommissioniervorgang_Seq ]
+  - Transporttechnik:
+      name: "Transporttechnik"
+      id: asd
+      children: [ Fördertechnik, Verkehrstechnik, Umschlag ]
+      fdls: [ Automatische_Verladesysteme_Hie ]
+  - Verkehrstechnik:
+      name: "Verkehrstechnik"
+      id: asd
+      children: [ ]
+      fdls: [ ]
+  - Stetigförderer:
+      name: "Stetigförderer"
+      id: wm1
+      children: [ Schüttgut, Stückgut, Schütt- und Stückgut ]
+      fdls: [ Stetigförderer_Ex_advanced, Stetigförderer_Char, Kreisfoerderer_TO, Example_Pro ]
+  - Unstetigförderer:
+      name: "Unstetigförderer"
+      id: wm2
+      children: [ Stapler ]
+      fdls: [ Unstetigförderer_Ex_simple, Unstetigförderer_Char, Flurförderzeuge_TO ]
+  - Fördertechnik:
+      name: "Fördermittel"
+      children: [ Stetigförderer, Unstetigförderer ]
+      id: wm3
+      fdls: [ Grundbegriffe_Fördertechnik_Fig ]
+  - Schüttgut:
+      name: "Schüttgut"
+      id: wm4
+      children: [ Becherwerk, Schneckenförderer, Schwingförderer ]
+      fdls: [ Massestrom_Eq2, Schuettgut_Def, Volumenstrom_Eq ]
+  - Stückgut:
+      name: "Stückgut"
+      id: wm5
+      children: [ Kreisförderer, Rollenbahn ]
+      fdls: [ Massestrom_Eq1 ]
+  - Schütt- und Stückgut:
+      name: "Schütt- und Stückgut"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Becherwerk:
+      name: "Becherwerk"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Schneckenförderer:
+      name: "Schneckenförderer"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Schwingförderer:
+      name: "Schwingförderer"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Kreisförderer:
+      name: "Kreisförderer"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Rollenbahn:
+      name: "Rollenbahn"
+      id: wm6
+      children: [ ]
+      fdls: [ ]
+  - Umschlag:
+      name: "Umschlag"
+      id: wm6
+      children: [ ]
+      fdls: [ Standardfrachtketten_Pa ]
+  - Stapler:
+      name: "Stapler"
+      id: wm6
+      children: [ ]
+      fdls: [ Gegengewicht_Kippsicherheit_Eq ]

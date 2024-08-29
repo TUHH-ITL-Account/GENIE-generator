@@ -1,0 +1,18 @@
+FDL Schwerkraft_Eq {
+  EQUATION F = m * g
+  WITH:
+    ALIASES:
+      F = "Schwerkraft";
+      m = "Durchschnittliche Masse";
+      g = "Erdbeschleunigung";
+
+    SPECIFICATIONS:
+      F = ("mass"*"length")/"time"^2;
+      m = "mass";
+      g = "length"/"time"^2;
+
+    REFERENCES:
+      F = 20-40 (kg*m)/s^2 IN INT; //Integer=ganze Zahl
+      m = 1-5 kg IN FLOAT[2]; //Float=fließkomma Zahl + 2 Nachkomma
+      g = CONSTANT "Erdbeschleunigung";
+}

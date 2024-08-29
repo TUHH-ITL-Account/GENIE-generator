@@ -1,0 +1,23 @@
+FDL Standardfrachtketten_Pa {
+  PATTERN "Standardfrachtketten" := AUTOMATON {
+    RELEVANCY = ALL;
+
+    STATE q0 "Q" <<INIT>>;
+    STATE q1 "S" <<FIN>>;
+    STATE q2 "UP";
+    STATE q3 "SP";
+    STATE q4 "VP";
+    STATE q5 "UP";
+
+    q0 - "Direktlauf" > q1;
+    q0 - "Vor-/Zulauf" > q2;
+    q2 - "Hauptlauf" > q2;
+    q2 - "Nach-/Auslauf" > q1;
+    q0 - "Vorlauf" > q3;
+    q3 - "Hauptlauf" > q4;
+    q3 - "Zulauf" > q5;
+    q5 - "Hauptlauf" > q5;
+    q5 - "Ablauf" > q4;
+    q4 - "Nachlauf" > q1;
+  }
+}

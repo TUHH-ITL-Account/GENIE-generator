@@ -1,0 +1,18 @@
+FDL Massestrom_Eq2 {
+  EQUATION m^^{.} = V^^{.} * @rho_{"s"}
+  WITH:
+    ALIASES:
+      m^^{.} = "Massestrom";
+      V^^{.} = "Volumenstrom";
+      @rho_{"s"} = "Schüttdichte";
+
+    SPECIFICATIONS:
+      m^^{.} = "mass"/"time";
+      V^^{.} = "length"^3/"time";
+      @rho_{"s"} = "mass"/"length"^3;
+
+    REFERENCES:
+      m^^{.} = 1-50 kg/s IN FLOAT[1];
+      V^^{.} = 0.05-1 m^3/s IN FLOAT[2];
+      @rho_{"s"} = 10-600 kg/m^3 IN INT;
+}

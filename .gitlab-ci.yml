@@ -1,0 +1,47 @@
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+stages:
+  # - cleanup TODO: Is it safe to not clean up and safe time this way?
+  - build
+  - publish_local
+  - trigger_downstream
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+  - "java --version"
+  - "gradle -v"
+
+    #cleanup_build:
+    #  stage: cleanup
+    #  tags:
+    #    - generating_backend
+    #  script:
+    #    - "gradle clean"
+    #build_deps:
+    #  stage: build
+    #  tags:
+    #    - generating_backend
+    #  script:
+    #    # build matheclipse aka symja_android_library
+    #    - if ! [ -d $HOME/matheclipse ]; then git clone --depth 1 https://github.com/axkr/symja_android_library.git $HOME/matheclipse ; fi
+    #    - cd $HOME/matheclipse
+    #    - git pull
+    #    - cd symja_android_library
+    #    - MAVEN_OPTS="-Xmx2G" mvn --show-version --quiet install
+
+build_gradle:
+  stage: build
+  tags:
+    - generating_backend
+  script:
+    - gradle build
+
+publish_local:
+  stage: publish_local
+  only:
+    - deploy_maven_buildserver
+  tags:
+    - generating_backend
+  script:
+    - gradle publishToMavenLocal

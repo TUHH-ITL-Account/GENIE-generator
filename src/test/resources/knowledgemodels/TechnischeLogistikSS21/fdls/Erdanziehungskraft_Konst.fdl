@@ -1,0 +1,3 @@
+FDL Erdanziehungskraft_Konst {
+  CONSTANT "Erdbeschleunigung" g := 9.81 m/s^2
+}

@@ -1,0 +1,20 @@
+FDL Automatische_Verladesysteme_Hie {
+  HIERARCHY "Automatische Verladesysteme" := {
+    "Verladesysteme"
+    --"automatisch"
+    ----"ohne Ladeflächentechnik"
+    ------"stetig"
+    --------"Rollenteppich"
+    --------"Hubkettenförderer"
+    ------"unstetig"
+    --------"Gabelverladeautomat"
+    --------"Modulfahrzeug"
+    ----"mit Ladeflächentechnik"
+    ------"stetig"
+    --------"Rollenförderer"
+    --------"Rollboden"
+    ----"Spezialsysteme"
+    ------"Automatische Rampe"
+  }
+}
+//Vorlesung Stetigförderer, Folie XX, TL SS23

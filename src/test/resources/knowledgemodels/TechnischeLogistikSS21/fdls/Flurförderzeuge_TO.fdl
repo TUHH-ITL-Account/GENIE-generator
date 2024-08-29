@@ -1,0 +1,11 @@
+FDL Flurförderzeuge_TO {
+  TRADE-OFF "Flurförderzeuge" :=
+    + {"Einsatzfähig in allen Betriebsbereichen (keine festverlegten Gleise).";
+      "Gute Beweglichkeit und Wendigkeit (enge Kurven, schmale Gassen).";
+      "Niedrige Betriebskosten bei großen Hubhöhen und Tragkräften.";
+      "Leicht anpassbar bei Layoutänderungen"}
+    - {"Ungeeignet für stetige Transporte.";
+      "Hoher Fahrwiderstand der Räder (im Vergleich zuSchienen), auch in Abhängigkeit der Bodenbeschaffenheit.";
+      "Ausgebildetes Personal erforderlich.";
+      "Bei Nutzung in höheren Gebäuden werden große Aufzüge benötigt."}
+}

@@ -1,0 +1,7 @@
+FDL Colors_Ex {
+  EXAMPLES "Color tones" := {
+    "red tone" { IMAGES: ["red.png","purple.png","maroon.png"] } ;
+    "blue tone" { IMAGES: ["blue.png","cyan.png","purple.png"] } ;
+    "green tone" { IMAGES: ["lime.png","green.png"] }
+  }
+}

@@ -1,0 +1,33 @@
+FDL Gegengewicht_Kippsicherheit_Eq {
+  EQUATION G_{"Gewicht"} = ( v * G_{"Last"} * ( x + c ) - G_{"Stapler"} * a ) / y
+  WITH:
+    ALIASES:
+      G_{"Gewicht"} = "Gegengewicht";
+      v = "Sicherheitsfaktor";
+      G_{"Last"} = "Gewicht der Last";
+      x = "Lastabstand";
+      c = "Lastschwerpunktabstand";
+      G_{"Stapler"} = "Gewicht des Staplers";
+      a = "Abstand Staplerschwerpunkt zur Vorderachse";
+      y = "Abstand zwischen den Rädern";
+
+    SPECIFICATIONS:
+      G_{"Gewicht"} = "mass";
+      G_{"Last"} = "mass";
+      x = "length";
+      c = "length";
+      G_{"Stapler"} = "mass";
+      a = "length";
+      y = "length";
+
+    REFERENCES:
+      G_{"Gewicht"} = 1000-3500 kg IN FLOAT[2];
+      v = 1.4-1.6 IN FLOAT[1];
+      G_{"Last"} = 700-1800 kg IN INT;
+      x = 0.25-0.5 m IN FLOAT[2];
+      c = 0.4-0.8 m IN FLOAT[1];
+      G_{"Stapler"} = 2000-2800 kg IN INT;
+      a = 0.45-0.85 m IN FLOAT[2];
+      y = 0.95-1.65 m IN FLOAT[2];
+}
+// Tutorium: 6-Gabelstapler, Folie: 11, TL SS23

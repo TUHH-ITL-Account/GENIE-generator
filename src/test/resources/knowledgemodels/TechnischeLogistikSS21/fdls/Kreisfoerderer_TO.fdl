@@ -1,0 +1,9 @@
+FDL Kreisfoerderer_TO {
+  TRADE-OFF "Kreisförderer" :=
+  + {"Räumliche Streckenführung, auch über große Längen, bei nur geringem Platzbedarf auf den Hallenbodenflächen";
+    "Vielfältige Anwendbarkeit als Verkettungsmittel zwischen technologischen Prozessen";
+	"Sehr geringe Antriebsleistung und geringer Verschleiß, einfache Wartung";
+	"Überbrückung von Höhenunterschieden und großen Entfernungen";
+	"Geräuscharmer Lauf; gute Anpassung an den innerbetrieblichen Materialfluss"}
+  - {"Geringe Fördergeschwindigkeit und Fördermenge"}
+}

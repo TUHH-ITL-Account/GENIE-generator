@@ -1,0 +1,17 @@
+FDL Stetigförderer_Char {
+  CHAR "Stetigförderer" := {
+    "Erzeugen einen kontinuierlichen Transportstrom an Gütern.";
+    "Arbeiten meist im Dauerbetrieb.";
+    "Der Antrieb sollte einen geringen Energiebedarf,eine große Betriebssicherheit und eine einfache Bauweise haben.";
+    "Be- und Entladung kann meist überall entlang der Strecke geschehen.";
+    "Haben ein gutes Verhältnis von Eigenlast (Totlast) zu Nutzlast.";
+    "Bedienpersonal ist oft nicht notwendig.";
+    "Eignen sich sehr gut für die Förderung von Massenprodukten.";
+    "Eine Kombination mit Produktionsprozessen ist leicht möglich, z.B. Kühlen oder Mischen.";
+    "Ortsfeste Anlagen benötigen viel Bodenfläche.";
+    "Tendenziell hohe Investitionen";
+    "Festgelegter Transportweg";
+    "Schwierigkeiten bei einer Fertigungsumstellung";
+    "Eng begrenzter Anwendungsbereich bezogen auf das Transportgut"
+  }
+}
